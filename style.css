@@ -1,0 +1,688 @@
+/*
+Theme Name: Hoolybib Theme
+Author: Vipin Yadav
+Author URI: https://twitter.com/vipiny35
+Version: 1.0
+*/
+
+
+/*	CSS reset
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*	CSS reset END */
+
+body{
+	font-family: 'Segoe UI', Arial, Sans-serif;
+	font-size: 14px;
+	background-color: #fefefe;
+}
+
+p{
+	line-height: 1.7em;
+}
+
+a:link,a:visited{
+	color: #5599fd;
+	text-decoration: none;
+}
+
+div{
+	border-radius: 3px;
+}
+
+/*-------Clearfix START-------*/
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+
+/*-------Clearfix END-------*/
+
+
+/*Header menu START*/
+
+.site-header{
+	height: 46px;
+	line-height: 46px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+.site-name{
+	font-size: 32px;
+	font-family: 'Sacramento', Arial, Sans-serif;
+	float: left;
+	margin: 0 30px 0 15px;
+}
+
+.site-name a:hover{
+	color: #fff;
+	text-shadow: 0 0 2px #fff;
+}
+
+.header-nav ul li{
+	float: left;
+	margin: 0 10px;
+}
+
+.header-nav ul li a:hover{
+	text-shadow: 0 0 1px #fff;
+}
+
+.social-links{
+	float: right;
+}
+.social-links i{
+	float: left;
+	margin-right: 7px;
+}
+
+#fa-icon{
+	line-height: 46px;
+}
+
+.social-links a{
+	font-size: 20px;
+}
+
+
+.fb:hover{color: #4862A3;}
+.tw:hover{color: #55ACEE;}
+.ig:hover{color: #CE20AF;}
+.yt:hover{color: #CD201F;}
+
+.searchform{
+	float: right;
+	margin: 0 5px;
+}
+
+.search-text{
+		outline: none;
+		color: #1d2129;
+		padding: 5px;
+		border: 2px solid #fff;
+		background: rgba(255,255,255, 1);
+		border-radius: 3px;
+		box-shadow: 
+	      inset 0 0 8px  rgba(0,0,0,0.1),
+	            0 0 16px rgba(0,0,0,0.1); 
+}
+
+.searchform input[type=text]:focus{
+	box-shadow: 0 0 5px #fff;		
+}
+
+.menu-trigger{
+	float: right;
+	display: none;
+}
+
+
+/*Header menu END*/
+
+
+/*Container START*/
+
+.container{
+	margin-top: 70px;
+	margin-left: 7%;
+	margin-right: 7%;
+	margin-bottom: 20px;
+	border: 2px solid #f9f9f9;
+	box-shadow: 0 0 1px #aaa;
+	display: flex;
+	border-radius: 3px;
+}
+/*Container END*/
+
+/*Article START*/
+
+.content-area{
+	margin: 10px;
+	flex: 3;
+	order: 1;
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+.sidebar{
+	margin: 10px;
+	margin-left: 0;
+	flex: 1;
+	order: 2;
+	overflow: hidden;
+	list-style: none;
+	border: 1px dashed #ddd;
+	background-color: #f5f5f5;
+	padding: 10px;
+	justify-content: center;
+	border-radius: 3px;
+}
+
+
+@media(max-width: 800px){
+	.container{
+		margin-left: 2%;
+		margin-right: 2%;
+		flex-direction: column;
+	}
+	.sidebar{
+		margin-left: 10px;
+		margin-bottom: 0;
+	}
+}
+
+.post{
+	margin-bottom: 10px;
+	border: 1px dashed #ddd;
+	background-color: #f5f5f5;
+	padding: 20px;
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+.post:last-child{
+	margin-bottom: 0;
+}
+
+.post-name{
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+
+
+.post-name a{
+	color: #222;
+}
+
+.post-name a:hover{
+	color: #0099FF;
+}
+
+.author-name,
+.date-posted,
+.category-name,
+.comment-count{
+	display: inline;
+	font-size: 0.87em;
+	color: #999;
+}
+
+.each-content{
+	margin-top: 10px;
+}
+
+img{
+	width: 100%;
+	height: auto;
+	border: 1px solid #fff;
+}
+
+.post-thumbnail{
+	float: left;
+	padding-right: 10px;
+}
+
+@media(max-width: 800px){
+		
+	.post-name{
+		font-size: 1.4em;
+		line-height: 1.2em;
+	}
+	.post-thumbnail{
+		width: 96px;
+	}
+
+}
+
+
+.archives{
+	border: 1px dashed #79aaff;
+	background-color: #fafafa;
+	font-size: 1.5em;
+	color: #555;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+}
+
+/*Article END*/
+
+
+
+/*Footer START*/
+
+.footer-widgets{
+	margin: 1% 7%;
+	border-radius: 3px;
+	overflow: hidden;
+	background-color: #f9f9f9;
+	box-shadow: 0 0 1px #aaa;
+	display: flex;
+	align-items: stretch;
+}
+
+.footer-widget-area{
+	flex: 1;
+	min-width: 0; /*for chrome*/
+	padding: 10px;
+	margin: 5px;
+	overflow: hidden;
+	border-radius: 3px;
+	background-color: #f5f5f5;
+}
+
+@media (max-width: 800px){
+	.footer-widgets{
+		margin: 2% 2%;
+		flex-direction: column;
+		/*align-items: center;*/ /*footer widget content align center*/
+	}
+}
+
+.footer-widget-area li{
+	list-style: none;
+}
+
+.site-footer{
+	color: #bbb;
+	background-color: #333;
+	text-align: center;
+	line-height: 46px;
+	padding: 0 30px;
+	display: flex; 
+	flex-direction: row;
+}
+
+@media(max-width: 800px){
+	.site-footer{
+		flex-direction: column;
+	}
+}
+
+.footer-nav,
+.social-links-footer,
+.copyright{
+	flex: 1;
+}
+
+.footer-nav ul{
+	display: inline-block;
+}
+
+.footer-nav ul li{
+	margin-right: 10px;
+	float: left;
+}
+
+.footer-nav ul li a{
+	color: #bbb;
+}
+
+.footer-nav ul li a:hover{
+	color: #fff;
+}
+
+.find-us{
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.social-links-footer a{
+	color: #ddd;
+	font-size: 18px;
+	margin-right: 5px;
+}
+
+/*Footer END*/
+
+
+
+/*Responsive CSS START*/
+.menu-overlay{
+	height: 0;
+    width: 0;
+    position: fixed;
+    z-index: 999999;
+    top: 0px;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.sitename-x-btn{
+	height: 46px;
+	line-height: 46px;
+}
+
+.menu-overlay .closebtn {
+	cursor: pointer;
+    position: absolute;
+    margin: 0 20px;
+    top: 0px;
+    right: 0px;
+    font-size: 1.5em;
+}
+
+.header-nav-overlay{
+	position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.header-nav-overlay li{
+	border: 1px dashed #444;
+	background-color: #666;
+	margin: 5px 10px;
+}
+
+.header-nav-overlay a{
+	padding: 10px;
+	display: block;
+	color: #eee;
+	font-size: 1.3em;
+}
+
+.header-nav-overlay a:hover{
+	text-shadow: 0 0 1px #fff;
+	color: #eeee22;
+}
+.header-nav-overlay li:hover{
+	background-color: #555;
+}
+
+.searchform-box{
+	margin: 15px;
+	margin-left: 0px;
+	padding: 10px;
+}
+
+.searchform-overlay input[type=text]{
+	height: 20px;
+	width: 100%;		
+}
+
+.searchform-overlay input[type=text]:focus{
+	box-shadow: 0 0 5px #fff;		
+}
+
+.social-links-overlay{
+text-align: center;
+}
+.social-links-overlay i{
+	float: left;
+	margin-top: 10px;
+	margin-right: 15px;
+}
+
+.social-links-overlay a{
+	display: inline-block;
+	color: #eee;
+	font-size: 32px;
+}
+
+
+
+
+
+@media(max-width: 800px){
+	
+	.menu-trigger{
+		display: inline-block;
+		font-size: 1.5em;
+		color: #fff;
+		margin: 0 20px;
+		cursor: pointer;
+	}
+	
+	.header-nav{
+		display: none;
+	}
+
+	.social-links{
+		display: none;
+	}
+
+	.searchform{
+		display: none;
+	}
+}
+
+
+/*Responsive CSS END*/
+
+/* Next and previous post START*/
+.post-next-prev-wrap {
+	padding: 14px 0px;
+	box-sizing: border-box;
+	border: 1px dashed #ddd;
+	background-color: #efefef;
+
+}
+
+.next-prev-container {
+	width: 50%;
+	padding: 0px 8px;
+	box-sizing: border-box;
+	display: inline-block;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	vertical-align: top;
+}
+
+.next-prev-container h3 {
+	font-size: 1.1em;
+	font-weight: bold;
+	padding: 0px;
+	margin: auto;
+	margin-top: 7px;
+	margin-bottom: 0px;
+}
+
+.next-prev-container span{
+	color: #aaa;
+	font-size: 0.7em;
+}
+.next-prev-container span a{
+	color: #aaa;
+	font-size: 1.2em;
+}
+
+.next-prev-container.prev {
+	text-align: left;
+	border-right: 1px dashed #bbb;
+	margin-right: -2px;
+}
+
+.next-prev-container.next {
+	text-align: right;
+	border-left: 1px dashed #bbb;
+	margin-left: -2px;
+}
+
+.next-prev-container.prev h3 {
+	text-align: left;
+}
+
+.next-prev-container.next h3 {
+	text-align: right;
+}
+
+
+.prev-img{
+	width: 64px;
+	float: left;
+	margin-right: 10px;
+}
+
+@media(max-width: 800px){
+	.prev-img,
+	.next-img{
+		display: none;
+	}
+}
+
+.next-img{
+	width: 64px;
+	float: right;
+	margin-left: 10px;
+}
+/* Next and previous post START*/
+
+
+/* Widget area START */
+
+.widget{
+	padding: 5%;
+	border: 1px dashed #bbb;
+	margin-bottom: 5%;
+	border-radius: 3px;
+}
+
+.widget h2{
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #888;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 5%;
+}
+.popular-posts img{
+	width: 20%;
+}
+.widget ul li{
+	margin-bottom: 10px;
+}
+.recent-posts-widget-with-thumbnails ul li a{
+	display: block;
+	margin-bottom: 10px;
+	font-weight: 500;
+	line-height: 1.5em;
+}
+
+.widget ul li a{
+	margin-bottom: 10px;
+	font-weight: 600;
+	line-height: 1.5em;
+}
+.widget ul li:last-child{
+	margin-bottom: 0;
+}
+
+.widget ul li a:hover{
+	color: orange;
+}
+/* Widget area END 
+
+
+/*Discuss comments START*/
+
+.disqus-comments{
+	border: 1px dashed #bbb;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+/*Discuss comments END*/
+
+
+
+/* Pages style START */
+.page-area{
+	padding: 10px;
+	width: 100%;
+	background-color: #efefef;
+}
+
+.page-name{
+	margin: 10px 0;
+	font-size: 2em;
+	color: #555;
+}
+
+.page-area p{
+	font-size: 1.2em;
+	color: #444;
+}
+/* Pages style END */
+
+
+/* 404 Error page START*/
+.error-page{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	text-align: center;
+	color: #333;
+}
+
+.error-page h2{
+	font-size: 3em;
+	margin: 20px;
+}
+
+.error-page p{
+	width: 80%;
+	margin: 10px;
+	font-size: 1em;
+	margin: 0 auto;
+}
+/* 404 Error page END*/
