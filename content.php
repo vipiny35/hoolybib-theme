@@ -6,7 +6,7 @@
 				<?php } 
 					else{?>
 						<div class="post-thumbnail">
-							<?php the_post_thumbnail('small-thumbnail'); ?>
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('small-thumbnail'); ?></a>
 						</div>
 					<?php }
 				?>
