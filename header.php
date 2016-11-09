@@ -11,7 +11,7 @@
 			single_cat_title('hoolybib - ');
 		}
 		elseif(is_front_page()){
-			echo "hoolybib - Home";
+			bloginfo('name'); echo " - "; bloginfo('description');
 		}
 		elseif(is_search()){
 			echo "hoolybib search: ".get_search_query();

@@ -73,9 +73,7 @@ a:link,a:visited{
 	text-decoration: none;
 }
 
-div{
-	border-radius: 3px;
-}
+
 
 /*-------Clearfix START-------*/
 
@@ -271,7 +269,6 @@ div{
 img{
 	width: 100%;
 	height: auto;
-	border: 1px solid #fff;
 }
 
 .post-thumbnail{
@@ -293,7 +290,7 @@ img{
 
 
 .archives{
-	border: 1px dashed #79aaff;
+	border: 1px dashed #ddd;
 	background-color: #fafafa;
 	font-size: 1.5em;
 	color: #555;
@@ -406,6 +403,7 @@ img{
     overflow-x: hidden;
     transition: 0.5s;
     color: #fff;
+    border-radius: 0;
 }
 
 .sitename-x-btn{

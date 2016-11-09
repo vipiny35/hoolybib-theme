@@ -4,7 +4,7 @@ function hoolybib_resources(){
 
 	wp_enqueue_style('style', get_stylesheet_uri(), array(), '1.0', 'all');
 	wp_enqueue_style('font-awesome',  get_template_directory_uri().'/css/font-awesome-4.6.3/css/font-awesome.css', array(), '', '');
-	wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Sacramento', array(), '', '');
+	wp_enqueue_style('google-font-site-name', 'https://fonts.googleapis.com/css?family=Sacramento', array(), '', '');	
 	// wp_enqueue_style('bootstrap', 'href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '', '');
 	
 	

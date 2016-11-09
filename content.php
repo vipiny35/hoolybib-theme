@@ -14,8 +14,7 @@
 			
 			<h2 class="post-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			
-	<?php if(!is_page()){ ?>
-		<!-- Post meta data -->
+	<?php if(!is_page()){ ?> <!-- Post meta data -->
 			<p class="author-name">By <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a> |</p>
 			<p class="date-posted"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_time('F jS, Y  g:i a'); ?> |</p>
 			
@@ -50,8 +49,7 @@
 			<!-- Comment count END -->
 			<?php } ?>
 
-	<?php } ?>		
-		<!-- Post meta data -->
+	<?php } ?><!-- Post meta data -->
 
 			<!-- Full content for page and post -->
 			<?php if(is_single() OR is_page()){ ?>
