@@ -198,3 +198,15 @@ function custom_widgets(){
 }
 
 add_action('widgets_init', 'custom_widgets');
+
+
+// Change default WordPress email address
+add_filter('wp_mail_from', 'new_mail_from');
+add_filter('wp_mail_from_name', 'new_mail_from_name');
+
+function new_mail_from($old) {
+return 'admin@hoolybib.com';
+}
+function new_mail_from_name($old) {
+return 'Hoolybib';
+}

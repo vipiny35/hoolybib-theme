@@ -1,4 +1,4 @@
-		<article class="post">
+<article class="post <?php if(is_sticky('ID')){ ?>sticky-post<?php } ?>">
 
 			<!-- Thumbnail for index and archieve  -->
 			<?php if(is_search() or is_single() or is_page()){?>
@@ -12,7 +12,7 @@
 				?>
 
 			
-			<h2 class="post-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<h2 class="post-name"><?php if(!is_single() AND !is_page()){ ?><a href="<?php the_permalink(); ?>"><?php } ?><?php the_title(); ?><?php if(!is_single() AND !is_page()){ ?></a><?php } ?></h2>
 			
 	<?php if(!is_page()){ ?> <!-- Post meta data -->
 			<p class="author-name">By <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a> |</p>
@@ -66,6 +66,6 @@
 
 			<?php } ?> <!-- else closes for content -->
 
-		</article>
+</article>
 
 

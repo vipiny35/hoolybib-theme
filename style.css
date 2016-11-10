@@ -684,3 +684,17 @@ text-align: center;
 	margin: 0 auto;
 }
 /* 404 Error page END*/
+
+
+/*Sticky or Feature post START*/
+
+.sticky-post{
+	transition: background-color 1s ease;
+	background-color: #D5F5E3;
+}
+
+.sticky-post:hover{
+	background-color: #FEF9E7;
+}
+
+/*Sticky or Feature post END*/
