@@ -96,11 +96,11 @@ add_action('customize_register' ,'hoolybib_nav_color');
 function hoolybib_nav_color_output(){ ?>
 
 		<style type="text/css">
-			.site-header{
+			.site-header, .menu-overlay, .site-footer{
 				background-color: <?php echo get_theme_mod('nav_color' ); ?>
 			}
 
-			.header-nav ul li a{
+			.header-nav ul li a, .footer-nav ul li a{
 				color: <?php echo get_theme_mod('nav_list_item_color' ); ?>
 			}
 
@@ -112,8 +112,7 @@ function hoolybib_nav_color_output(){ ?>
 				color: <?php echo get_theme_mod('nav_social_link_color' ); ?>	
 			}
 
-			.header-nav ul li a:hover,
-			.site-name a:hover{
+			.header-nav ul li a:hover, .site-name a:hover, .footer-nav ul li a:hover{
 				color: <?php echo get_theme_mod('nav_hover_color' ); ?>
 			}
 		</style>
@@ -210,3 +209,30 @@ return 'admin@hoolybib.com';
 function new_mail_from_name($old) {
 return 'Hoolybib';
 }
+
+
+
+//Set Featured image from first image in post
+function auto_featured_image() {
+    global $post;
+ 
+    if (!has_post_thumbnail($post->ID)) {
+        $attached_image = get_children( "post_parent=$post->ID&amp;post_type=attachment&amp;post_mime_type=image&amp;numberposts=1" );
+         
+      if ($attached_image) {
+              foreach ($attached_image as $attachment_id => $attachment) {
+                   set_post_thumbnail($post->ID, $attachment_id);
+              }
+         }
+    }
+}
+
+// Use it temporary to generate all featured images
+// add_action('the_post', 'auto_featured_image');
+
+// Used for new posts
+add_action('save_post', 'auto_featured_image');
+add_action('draft_to_publish', 'auto_featured_image');
+add_action('new_to_publish', 'auto_featured_image');
+add_action('pending_to_publish', 'auto_featured_image');
+add_action('future_to_publish', 'auto_featured_image');
