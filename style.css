@@ -69,12 +69,13 @@ p{
 }
 
 a:link,a:visited{
-	color: #5599fd;
+	/*color: #5599fd;*/
+	color: #333;
 	text-decoration: none;
 }
 
 div{
-	border-radius: 3px;
+	border-radius: 0px;
 }
 
 ::selection {
@@ -102,6 +103,7 @@ div{
 /*Header menu START*/
 
 .site-header{
+	box-shadow: 0 0 10px #666;
 	height: 46px;
 	line-height: 46px;
 	position: fixed;
@@ -126,7 +128,10 @@ div{
 	float: left;
 	margin: 0 10px;
 }
-
+.header-nav ul li a{
+	font-size: 1em;
+	font-weight: 500;
+}
 .header-nav ul li a:hover{
 	text-shadow: 0 0 1px #fff;
 }
@@ -209,6 +214,7 @@ div{
 
 .sidebar{
 	margin: 10px;
+	margin-top: 0;
 	margin-left: 0;
 	flex: 1;
 	order: 2;
@@ -237,13 +243,13 @@ div{
 .post{
 	margin-bottom: 10px;
 	border: 1px dashed #ddd;
-	background-color: #f5f5f5;
-	padding: 20px;
+	background-color: #fbfbfb;
+	padding: 10px;
 	overflow: hidden;
 	border-radius: 3px;
 }
 
-.post:nth-child(2){background-color: #DBECC2;}
+/*.post:nth-child(2){background-color: #DBECC2;}
 .post:nth-child(3){background-color: #FED2B5;}
 .post:nth-child(4){background-color: #AED6F1;}
 .post:nth-child(5){background-color: #F9FBBA;}
@@ -262,7 +268,7 @@ div{
 .post:nth-child(18){background-color: #FDEDEC;}
 .post:nth-child(19){background-color: #EADAEE;}
 .post:nth-child(20){background-color:#F7EAC8;}
-/*.post:nth-child(21){background-color: #FEF9E7;}
+.post:nth-child(21){background-color: #FEF9E7;}
 .post:nth-child(22){background-color: #DBECC2;}
 .post:nth-child(23){background-color: #FED2B5;}
 .post:nth-child(24){background-color: #AED6F1;}
@@ -274,10 +280,9 @@ div{
 .post:nth-child(30){background-color:#F7EAC8;}*/
 
 /*Sticky or Feature post START*/
-.sticky-post:nth-child(odd){
+/*.sticky-post:nth-child(odd){
 	transition: background-color 2s ease;
 	background-color: #D5F5E3;
-	border: 1px dashed green;
 }
 
 .sticky-post:nth-child(odd):hover{
@@ -287,12 +292,11 @@ div{
 .sticky-post:nth-child(even){
 	transition: background-color 2s ease;
 	background-color: #F5B7B1;
-	border: 1px dashed red;
 }
 
 .sticky-post:nth-child(even):hover{
 	background-color: #AED6F1;
-}
+}*/
 /*Sticky or Feature post END*/
 
 .post:last-child{
@@ -323,7 +327,7 @@ div{
 }
 
 .each-content{
-	margin-top: 10px;
+	margin-top: 15px;
 }
 
 img{
@@ -572,8 +576,8 @@ text-align: center;
 	padding: 14px 0px;
 	box-sizing: border-box;
 	border: 1px dashed #ddd;
-	background-color: #D5F5E3;
-
+	background-color: #FBFBFB;
+	margin: 5px 0;
 }
 
 .next-prev-container {
@@ -643,6 +647,7 @@ text-align: center;
 	float: right;
 	margin-left: 10px;
 }
+
 /* Next and previous post START*/
 
 
@@ -650,19 +655,19 @@ text-align: center;
 
 .widget{
 	padding: 5%;
-	border: 1px dashed #bbb;
-	margin-bottom: 5%;
+	/*border: 1px dashed #bbb;*/
+	/*margin-bottom: 5%;*/
 	border-radius: 3px;
-	background-color: #FEF9E7;
+	/*background-color: #FEF9E7;*/
 }
 
 .widget h2{
 	text-align: center;
 	/*margin: 0 20%;*/
 	padding: 10px;
-	border-bottom: 3px solid #DBE5EB;
+	border-bottom: 3px solid #999;
 	/*text-shadow: 1px 1px 1px #ddd;*/
-	background-color: #AED6F1;
+	background-color: #333;
 	font-size: 1.1em;
 	font-weight: bold;
 	color: #ffffff;
@@ -673,7 +678,7 @@ text-align: center;
 }
 
 .popular-posts{
-	background-color: #FDEDEC;
+	/*background-color: #DBECC2;*/
 }
 
 .popular-posts img{
@@ -701,7 +706,7 @@ text-align: center;
 }
 
 .widget ul li a:hover{
-	color: orange;
+	color: #0099FF;
 }
 /* Widget area END 
 
@@ -709,8 +714,8 @@ text-align: center;
 /*Discuss comments START*/
 
 .disqus-comments{
-	background-color: #E3ECF2;
-	border: 1px dashed #bbb;
+	/*background-color: #E3ECF2;*/
+	/*border: 1px dashed #bbb;*/
 	margin-top: 20px;
 	padding: 10px;
 }
@@ -762,3 +767,53 @@ text-align: center;
 /* 404 Error page END*/
 
 
+/*Category custom template START*/
+
+.row-parent{
+	text-align: center;
+}
+
+.row-wrap{
+	box-shadow: 0 0 1px #aaa;
+	padding: 5px;
+	margin: 5px;
+	display: inline-block;
+	height: auto;
+	width: 250px;	
+}
+
+.title-cat{
+	text-align: center;
+	color: #333;
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+.row-wrap img{
+	width:100%;
+    vertical-align:top;
+	transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+}
+.row-wrap img:hover{
+	
+	opacity:0.8;
+	transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+	
+}
+
+.cat-content{
+	padding: 10px;
+	margin: 0 auto;
+	width: 70%;
+}
+
+@media(max-width: 800px){
+	.cat-content{
+		width: 100%;
+	}
+}
+/*Category custom template END*/

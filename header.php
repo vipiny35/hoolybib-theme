@@ -86,8 +86,12 @@
 
 	<div class="container clearfix">
 	
+
+	<!-- Hide sidebar from special category pages -->
+	<?php if(!is_category(array('gifs', 'haha')) ){ ?>
+		
 		<div class="sidebar">
 			<?php dynamic_sidebar('sidebar' ); ?>
 		</div>
-	<!-- <?php if(is_page()){ /*empty if statement for pages*/} else{ ?>
-	<?php } ?> -->
+	
+	<?php } ?>
