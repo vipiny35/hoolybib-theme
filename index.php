@@ -1,7 +1,4 @@
-<?php 
-
-get_header();
-?>
+<?php  get_header(); ?>
 <div class="content-area">
 
 <?php
@@ -15,8 +12,9 @@ if(have_posts()) :
 	else:
 		echo "<p>No Post Found.";
 	endif;
-?></div><?php
-get_footer();
-
 ?>
+
+<?php pagination_hoolybib(); ?>
+</div>
+<?php get_footer(); ?>
 

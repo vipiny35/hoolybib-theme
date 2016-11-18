@@ -42,6 +42,7 @@ if(have_posts()) :
 		echo "<p>Archieve is empty.</p>";
 	endif;
 ?>
+<?php pagination_hoolybib(); ?>
 </div>
 
 <?php

@@ -20,6 +20,7 @@ if(have_posts()) :?>
 		<h2 class="archives">No results found: <?php echo get_search_query(); ?> </h2>
 	<?php endif;
 ?>
+<?php pagination_hoolybib(); ?>
 </div>
 
 <?php

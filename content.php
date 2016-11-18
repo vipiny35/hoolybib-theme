@@ -2,7 +2,7 @@
 
 			<!-- Thumbnail for index and archieve  -->
 			<?php if(is_search() or is_single() or is_page()){?>
-	
+					<!-- Empty if loop -->
 				<?php }  else{ ?>
 					<div class="post-thumbnail">
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('index-thumbnail'); ?></a>
@@ -26,7 +26,7 @@
 					<a class="show-more" href="<?php the_permalink(); ?>">Show more</a>
 				</div>
 			<?php } ?> <!-- else closes for Full content for page and post -->
-			
+
 
 </article>
 

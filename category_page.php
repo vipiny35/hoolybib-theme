@@ -18,7 +18,7 @@
 			</div>
 
 		<?php endwhile; else: echo "<p>No GIFs found.</p>"; endif; ?>
-
+	<?php pagination_hoolybib(); ?>
 	</div>
 <?php get_footer(); ?>
 

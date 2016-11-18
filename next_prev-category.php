@@ -1,7 +1,7 @@
 	
 <div class="post-next-prev-wrap">
 	<div class="next-prev-container prev">
-	<?php $nextPost = get_next_post(false, array('19','20'));/*bool true for same category and 2nd argument for excluding the category*/
+	<?php $nextPost = get_next_post(true);/*bool true for same category and 2nd argument for excluding the category*/
 	        if($nextPost) {
 	            $args = array(
 	                'posts_per_page' => 1,
@@ -25,7 +25,7 @@
 		</div>
 	
 	<div class="next-prev-container next">
-		<?php $prevPost = get_previous_post(false, array('19','20'));/*bool true for same category and 2nd argument for excluding the category*/
+		<?php $prevPost = get_previous_post(true);/*bool true for same category and 2nd argument for excluding the category*/
 	        if($prevPost) {
 	            $args = array(
 	                'posts_per_page' => 1,
