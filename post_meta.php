@@ -1,9 +1,10 @@
 <?php if(!is_page()){ ?> <!-- Post meta data START-->
-		<p class="author-name">By <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a> |</p>
-		<p class="date-posted"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_time('F jS, Y  g:i a'); ?> |</p>
 		
+		
+		<p class="author-name">Posted by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a> - </p>
+		<p class="date-posted"> <!-- <i class="fa fa-clock-o" aria-hidden="true"></i> --> <?php the_time('F jS, Y  g:i a'); ?> in </p>
 		<!-- Category <p> START -->
-		<p class="category-name">Category: 
+		<p class="category-name"> 
 		<?php
 			$categories = get_the_category();
 			$separator = ", ";

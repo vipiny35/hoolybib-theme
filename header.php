@@ -8,16 +8,16 @@
 
 	<?php 
 		if(is_archive()){
-			single_cat_title('hoolybib - ');
+			single_cat_title('Hoolybib - ');
 		}
 		elseif(is_front_page()){
 			bloginfo('name'); echo " - "; bloginfo('description');
 		}
 		elseif(is_search()){
-			echo "hoolybib search: ".get_search_query();
+			echo "Hoolybib search: ".get_search_query();
 		}
 		else{
-			single_post_title( 'hoolybib - ' );
+			single_post_title( 'Hoolybib - ' );
 		}
 	?>
 		
@@ -29,7 +29,7 @@
 	<header class="site-header clearfix">
 	
 		<div class="site-name">
-			<a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+			<a href="<?php echo home_url(); ?>">hoolybib</a>
 		</div>
 		
 

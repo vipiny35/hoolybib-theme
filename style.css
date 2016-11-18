@@ -5,16 +5,9 @@ Author URI: https://twitter.com/vipiny35
 Version: 1.0
 */
 
-
-/*	CSS reset
-	http://meyerweb.com/eric/tools/css/reset/ 
-	v2.0 | 20110126
-	License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+/*	CSS reset  */
+html, body, div, span, applet, object, iframe, pre,
+h1, h2, h3, h4, h5, h6, a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -28,8 +21,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -37,31 +28,20 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
 ol, ul {
 	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
 }
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 /*	CSS reset END */
 
 body{
 	font-family: 'Segoe UI', Arial, Sans-serif;
 	font-size: 14px;
 	background-color: #fefefe;
+	color: #606060;
 }
 
 p{
@@ -69,8 +49,7 @@ p{
 }
 
 a:link,a:visited{
-	/*color: #5599fd;*/
-	color: #333;
+	color: #707070;
 	text-decoration: none;
 }
 
@@ -310,11 +289,11 @@ div{
 
 
 .post-name a{
-	color: #222;
+	color: #707070;
 }
 
 .post-name a:hover{
-	color: #0099FF;
+	color: #2eabff;
 }
 
 .author-name,
@@ -322,18 +301,62 @@ div{
 .category-name,
 .comment-count{
 	display: inline;
-	font-size: 0.87em;
-	color: #999;
+	font-size: 0.9em;
+	color: #bbb;
 }
 
-.each-content{
-	margin-top: 15px;
+.author-name a,
+.category-name a,
+.comment-count a{
+	color: #707070;
+}
+
+.author-name a:hover,
+.category-name a:hover,
+.comment-count a:hover{
+	color: #2eabff;
+}
+.each-content a{
+	color: #2eabff;
+}
+
+.each-content a:hover{
+	color: #FF6347;
+}
+
+.each-content .show-more{
+	font-weight: 600;
+	font-size: 0.9em;
+}
+
+.header-margin{
+	margin-top: 10px;
+}
+.each-content .excerpt{
+	color: #808080;
+	word-spacing: 2px;
 }
 
 img{
 	width: 100%;
 	height: auto;
 }
+
+/*Embed class for YouTube*/
+.embed {
+	position:relative;
+	padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+	padding-top: 25px;
+}
+.embed iframe, .embed object, .embed embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100% !important;
+	height:100% !important;
+}
+/*iframe for twitter embed codes*/
+iframe { max-width: 100%!important; }
 
 .post-thumbnail{
 	float: left;
@@ -696,6 +719,15 @@ text-align: center;
 	line-height: 1.5em;
 }
 
+/*Recent posts public.css file START*/
+.rpwwt-widget ul { list-style: outside none none !important; margin-left: 0 !important; margin-right: 0 !important; padding-left: 0 !important; padding-right: 0 !important; }
+.rpwwt-widget ul li { overflow: hidden !important; margin: 0px !important; }
+.rpwwt-widget ul li:last-child { margin: 0 !important; }
+.rpwwt-widget ul li img { display: inline !important; float: left !important; margin: 0px 5px 5px 0 !important; }
+#rpwwt-recent-posts-widget-with-thumbnails-2 img { width: 48px !important; height: 48px !important; }
+/*Recent posts public.css file END*/
+
+
 .widget ul li a{
 	margin-bottom: 10px;
 	font-weight: 600;
@@ -706,8 +738,81 @@ text-align: center;
 }
 
 .widget ul li a:hover{
-	color: #0099FF;
+	color: #2eabff;
 }
+
+
+/* Wordpress Popular Posts plugin stylesheet
+Use the following classes to style your popular posts list as you like.
+*/
+
+/* Styles the "Sorry, no data so far" message */
+.wpp-no-data {
+}
+
+/* UL - Popular Posts container styles */
+.wpp-list {	
+}
+
+	/* LI - Post container styles */
+	.wpp-list li {
+		overflow:hidden;
+		float:none;
+		clear:both;
+	}
+	
+	/* Styles for the popular post in view */
+	.wpp-list li.current {
+	}
+	
+		/* Thumbnail styles */
+		.wpp-thumbnail {
+			display:inline;
+			float:left;
+			margin:0 5px 0 0;
+			border:none;
+		}
+
+		/* Title styles */
+		.wpp-post-title {
+		}
+		
+		/* Excerpt styles */
+		.wpp-excerpt {
+		}
+		
+		/* Stats tag styles */
+		.post-stats {
+			display:block;
+			font-size:9px;
+			font-weight:bold;
+		}
+			
+			/* Comments count styles */
+			.wpp-comments {
+			}
+			
+			/* Views count styles */
+			.wpp-views {
+			}
+			
+			/* Author styles */
+			.wpp-author {
+			}
+			
+			/* Post date styles */
+			.wpp-date {
+			}
+			
+			/* Post category styles */
+			.wpp-category {
+			}
+		
+		/* WP-PostRatings styles */
+		.wpp-rating {
+		}
+
+
 /* Widget area END 
 
 
@@ -715,7 +820,7 @@ text-align: center;
 
 .disqus-comments{
 	/*background-color: #E3ECF2;*/
-	/*border: 1px dashed #bbb;*/
+	border: 1px dashed #bbb;
 	margin-top: 20px;
 	padding: 10px;
 }
@@ -768,41 +873,45 @@ text-align: center;
 
 
 /*Category custom template START*/
-
-.row-parent{
-	text-align: center;
-}
-
 .row-wrap{
 	box-shadow: 0 0 1px #aaa;
 	padding: 5px;
 	margin: 5px;
 	display: inline-block;
-	height: auto;
-	width: 250px;	
+	
 }
 
 .title-cat{
+	margin: 0 auto;
+	background: #fff;
 	text-align: center;
-	color: #333;
-	font-size: 1.1em;
+	color: #707070;
 	font-weight: 500;
 }
 
-.row-wrap img{
-	width:100%;
-    vertical-align:top;
-	transition: opacity 0.3s ease-in-out;
-    -moz-transition: opacity 0.3s ease-in-out;
-    -webkit-transition: opacity 0.3s ease-in-out;
+.title-cat:hover{
+	color: #2eabff;
 }
-.row-wrap img:hover{
-	
-	opacity:0.8;
-	transition: opacity 0.3s ease-in-out;
-    -moz-transition: opacity 0.3s ease-in-out;
-    -webkit-transition: opacity 0.3s ease-in-out;
-	
+
+.link-wrap{
+	height: auto;
+	width: 250px;	
+	display: inline-block;
+    background: black;
+}
+
+.link-wrap img{
+	margin-bottom: -4px;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.link-wrap:hover img {
+    opacity: 0.6;
+            
 }
 
 .cat-content{
@@ -812,8 +921,19 @@ text-align: center;
 }
 
 @media(max-width: 800px){
+	.row-parent{
+	text-align: center;
+	}
+
 	.cat-content{
 		width: 100%;
 	}
 }
 /*Category custom template END*/
+
+/*Social button formatting START*/
+.social-btn{
+	padding: 5px;
+}
+
+/*Social button formatting END*/

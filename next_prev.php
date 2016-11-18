@@ -15,7 +15,7 @@
         <span><a class="previous" href="<?php the_permalink(); ?>">&laquo; Go back in time</a></span>
         <div class="prev-img"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a></div>
         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-        <span><?php the_date('F jS, Y  g:i a'); ?></span>
+        <span><?php the_time('F jS, Y  g:i a'); ?></span>
     
     <?php
                 wp_reset_postdata();
@@ -39,7 +39,7 @@
         <span><a class="next" href="<?php the_permalink(); ?>">See what&apos;s next &raquo;</a></span>
         <div class="next-img"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a></div>
         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-        <span><?php the_date('F jS, Y  g:i a'); ?></span>
+        <span><?php the_time('F jS, Y  g:i a'); ?></span>
     
 	<?php
                 wp_reset_postdata();

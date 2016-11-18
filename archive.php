@@ -9,7 +9,7 @@ if(have_posts()) :
 
 	?>
 
-				<h2 class="archives"><?php
+				<!-- <h2 class="archives"><?php
 
 					if ( is_category() ) {
 					echo 'Category: ';	single_cat_title();
@@ -29,7 +29,7 @@ if(have_posts()) :
 						echo 'Archives:';
 					}
 
-				?></h2>
+				?></h2> -->
 
 				<?php
 	while(have_posts()) : the_post();

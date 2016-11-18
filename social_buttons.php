@@ -26,25 +26,7 @@
     data-count="vertical">Tweet</a>
 <!-- Tweet Button END -->
 
-<!-- Email Share Button START-->
-<style>
-	.email{
-		display: inline-block;
-		height: 28px; 
-		font-size: 18px;
-    	line-height: 28px;
-		border-radius: 4px;
-		padding: 0px 10px; 
-		color: #fff !important;
-		background-color: #4285F4;
-		vertical-align: text-bottom !important;
-	}
-</style>
 
-<a class="email" href="mailto:?subject=<?php the_title(); ?>&amp;body=Check out this site <?php the_permalink(); ?>" title="Share by Email">
-	<i class="fa fa-envelope" aria-hidden="true"></i>
-</a>
-<!-- Email Share Button END-->	
 
 
 <!-- Whatsapp Share Button START-->
@@ -66,13 +48,36 @@
 		}
 	}
 </style>
-<a class="whatsapp" href="whatsapp://send?text=<?php the_title(); ?> <br> <?php the_permalink(); ?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+<a class="whatsapp" href="whatsapp://send?text=<?php the_title(); ?> <?php the_permalink(); ?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
 <!-- Whatsapp Share Button END-->
+
+<!-- Email Share Button START-->
+<style>
+	.email{
+		display: inline-block;
+		height: 28px; 
+		font-size: 18px;
+    	line-height: 28px;
+		border-radius: 4px;
+		padding: 0px 10px; 
+		color: #fff !important;
+		background-color: #4285F4;
+		vertical-align: text-bottom !important;
+	}
+	@media(max-width: 800px){
+		.email{
+			display: none;
+		}
+	}
+</style>
+
+<a class="email" href="mailto:?subject=<?php the_title(); ?>&amp;body=Check out this site <?php the_permalink(); ?>" title="Share by Email">
+	<i class="fa fa-envelope" aria-hidden="true"></i>
+</a>
+<!-- Email Share Button END-->	
 
 
 <!-- Google +1 Button START -->
-
 <!-- <script src="https://apis.google.com/js/platform.js" async defer></script>
-<div class="g-plusone gp"></div> -->
-
+<div class="g-plusone"></div> -->
 <!-- Google +1 Button END -->

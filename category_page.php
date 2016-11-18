@@ -6,7 +6,7 @@
 			<div class="row-wrap">
 			
 				<!-- Link START-->
-				<a class="img-wrap" href="<?php the_permalink(); ?>">
+				<a class="link-wrap" href="<?php the_permalink(); ?>">
 				
 					<?php 
 					if(has_post_thumbnail('medium-thumbnail' )){the_post_thumbnail('medium-thumbnail' );} 

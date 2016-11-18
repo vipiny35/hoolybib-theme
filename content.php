@@ -16,13 +16,14 @@
 
 			<!-- Full content for page and post -->
 			<?php if(is_single() OR is_page()){ ?>
-				<div class="each-content"><?php the_content(); ?></div>
-				<?php if(is_single()){get_template_part('social_buttons' );} ?>
+				<div class="each-content header-margin"><?php the_content(); ?></div>
+				<?php if(is_single()){?> <div class="social-btn"> <?php get_template_part('social_buttons' );?> </div> <?php } ?>
 			<?php } //if closes for Full content for page and post
 
 			else { ?>
-				<div class="each-content"><?php echo get_the_excerpt(); ?>
-					<a href="<?php the_permalink(); ?>">Show more</a>
+				<div class="each-content">
+					<span class="excerpt"><?php echo get_the_excerpt(); ?></span>
+					<a class="show-more" href="<?php the_permalink(); ?>">Show more</a>
 				</div>
 			<?php } ?> <!-- else closes for Full content for page and post -->
 			
