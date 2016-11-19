@@ -24,9 +24,11 @@
 
 		
 		<!-- Comment Count START-->
-		<?php if(is_single()){ ?>
-			<span class="comment-count">&nbsp;|&nbsp;<i class="fa fa-commenting-o" aria-hidden="true"> </i>&nbsp;<a href="<?php the_permalink(); ?>#disqus_thread"></a></span>
+		<?php //if(is_single()){ ?>
+			<!-- <span class="comment-count">&nbsp;|&nbsp;<i class="fa fa-commenting-o" aria-hidden="true"> </i>&nbsp;<a href="<?php the_permalink(); ?>#disqus_thread"></a></span> -->
+			&nbsp;<i class="fa fa-commenting-o" aria-hidden="true"> </i>&nbsp;<fb:comments-count href="<?php echo get_permalink($post->ID); ?>"></fb:comments-count>
+
 		<!-- Comment count END -->
-		<?php } ?>
+		<?php //} ?>
 
 <?php } ?><!-- Post meta data END-->

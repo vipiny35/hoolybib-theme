@@ -8,7 +8,9 @@
 
 	<?php get_template_part('content', 'category'); ?>
 
-	<?php get_template_part('disqus_comment' ); ?>
+	<?php //get_template_part('comment_disqus' ); ?>
+
+	<?php get_template_part('comment_facebook' ); ?>
 
 	<?php endwhile; else: echo "<p>No Post Found."; endif; ?>
 

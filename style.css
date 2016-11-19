@@ -178,6 +178,7 @@ div{
 	box-shadow: 0 0 1px #aaa;
 	display: flex;
 	border-radius: 3px;
+	min-height: 500px;
 }
 /*Container END*/
 
@@ -284,7 +285,6 @@ div{
 
 .post-name{
 	font-size: 2em;
-	margin-bottom: 10px;
 }
 
 
@@ -315,6 +315,9 @@ div{
 .category-name a:hover,
 .comment-count a:hover{
 	color: #2eabff;
+}
+.each-content{
+	margin-top: 5px;
 }
 .each-content a{
 	color: #2eabff;
@@ -455,6 +458,13 @@ iframe { max-width: 100%!important; }
 	float: left;
 }
 
+@media(max-width: 600px){
+	.footer-nav ul li{
+		margin: 5px;
+		float: none;
+		display: inline-block;
+	}
+}
 .footer-nav ul li a{
 	color: #bbb;
 }
@@ -819,16 +829,21 @@ Use the following classes to style your popular posts list as you like.
 /* Widget area END 
 
 
-/*Discuss comments START*/
+/*Comments START*/
 
 .disqus-comments{
 	/*background-color: #E3ECF2;*/
 	border: 1px dashed #bbb;
-	margin-top: 20px;
-	padding: 10px;
+	margin: 20px 0;
 }
 
-/*Discuss comments END*/
+.facebook-comments{
+	/*background-color: #E3ECF2;*/
+	/*border: 1px dashed #bbb;*/
+	margin: 20px 0;
+}
+
+/*Comments END*/
 
 
 
@@ -975,3 +990,4 @@ Use the following classes to style your popular posts list as you like.
 	background-color: #505050;
 }
 /*Pagination END*/
+

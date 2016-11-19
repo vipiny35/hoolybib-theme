@@ -1,7 +1,4 @@
-<?php 
-
-get_header();
-?>
+<?php get_header(); ?>
 <div class="content-area">
 
 <?php
@@ -23,7 +20,4 @@ if(have_posts()) :?>
 <?php pagination_hoolybib(); ?>
 </div>
 
-<?php
-get_footer();
-
-?>
+<?php get_footer(); ?>
