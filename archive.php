@@ -35,7 +35,7 @@ if(have_posts()) :
 	 endwhile;
 
 	else:
-		echo "<p>Archieve is empty.</p>";
+		echo "<p>Archive is empty.</p>";
 	endif;
 ?>
 <?php pagination_hoolybib(); ?>

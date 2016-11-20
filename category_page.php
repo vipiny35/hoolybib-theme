@@ -17,7 +17,7 @@
 				</a><!-- Link END-->
 			</div>
 
-		<?php endwhile; else: echo "<p>No GIFs found.</p>"; endif; ?>
+		<?php endwhile; else: echo "<p>No posts found.</p>"; endif; ?>
 		<div class="clearfix"></div>
 		<?php pagination_hoolybib(); ?>
 	</div>

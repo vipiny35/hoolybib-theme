@@ -6,35 +6,7 @@ Version: 1.0
 */
 
 /*	CSS reset  */
-html, body, div, span, applet, object, iframe, pre,
-h1, h2, h3, h4, h5, h6, a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-ol, ul {
-	list-style: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 /*	CSS reset END */
 
 body{
@@ -42,6 +14,19 @@ body{
 	font-size: 14px;
 	background-color: #fefefe;
 	color: #606060;
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+ol, ul, li{
+	margin: 5px 0;
+}
+
+li:last-child{
+	margin-bottom: 20px;
 }
 
 p{
@@ -103,6 +88,14 @@ div{
 	text-shadow: 0 0 2px #fff;
 }
 
+.site-header ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.site-header ul li{
+
+}
 .header-nav ul li{
 	float: left;
 	margin: 0 10px;
@@ -287,6 +280,9 @@ div{
 	font-size: 2em;
 }
 
+.post-name{
+	margin-bottom: 25px;
+}
 
 .post-name a{
 	color: #707070;
@@ -437,6 +433,12 @@ iframe { max-width: 100%!important; }
 	flex-direction: row;
 }
 
+.site-footer ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
 @media(max-width: 800px){
 	.site-footer{
 		flex-direction: column;
@@ -503,6 +505,11 @@ iframe { max-width: 100%!important; }
 	border-radius: 0;	
 }
 
+.menu-overlay ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 .sitename-x-btn{
 	height: 46px;
 	line-height: 46px;
@@ -764,7 +771,10 @@ Use the following classes to style your popular posts list as you like.
 }
 
 /* UL - Popular Posts container styles */
-.wpp-list {	
+.wpp-list{
+	list-style: none;
+	margin: 0;
+	padding: 0;	
 }
 
 	/* LI - Post container styles */
